@@ -1,0 +1,4 @@
+/home/alex/Desktop/CppTest2/cmake-build-debug/CMakeFiles/Calculator.dir
+/home/alex/Desktop/CppTest2/cmake-build-debug/CMakeFiles/main.dir
+/home/alex/Desktop/CppTest2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/alex/Desktop/CppTest2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

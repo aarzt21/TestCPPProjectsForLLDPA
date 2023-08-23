@@ -1,0 +1,81 @@
+        -:    0:Source:/home/alex/Desktop/CppTest2/Calculator.cpp
+        -:    0:Graph:/home/alex/Desktop/CppTest2/COVERAGE_OUT/OUT-Calculator.gcno
+        -:    0:Data:/home/alex/Desktop/CppTest2/COVERAGE_OUT/OUT-Calculator.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by alex on 03.08.23.
+        -:    3://
+        -:    4:
+        -:    5:#include "Calculator.h"
+        -:    6:
+     2002:    7:int Calculator::get_result() {
+     2002:    8:    return result;
+        -:    9:}
+        -:   10:
+        1:   11:void Calculator::calculate_result(std::vector<int> &data) {
+        1:   12:    int sum = 0;
+        -:   13:
+    10001:   14:    for (auto& e : data){
+    10000:   15:        if (e % 543 != 0){
+     9984:   16:            sum += e;
+        -:   17:        }
+        -:   18:        else {
+       16:   19:            int k = 0;
+       16:   20:            k++;
+       16:   21:            k++;
+       16:   22:            k++;
+       16:   23:            k++;
+       16:   24:            sum += k;
+        -:   25:        }
+        -:   26:    }
+        -:   27:
+        1:   28:    this->result = sum;
+        1:   29:}
+        -:   30:
+    #####:   31:void Calculator::makeNoise() {
+    #####:   32:    std::cout << "Hello from Parent" << std::endl;
+    #####:   33:}
+        -:   34:
+        2:   35:int Calculator::aggregate(int flag) {
+        2:   36:    int res = 0;
+        -:   37:
+    22002:   38:    for (int i = -1000; i < 10000; i ++){
+    22000:   39:        if (flag != 12){
+    11000:   40:            res += i;
+        -:   41:        }
+        -:   42:        else {
+    11000:   43:            if (i < 0) continue;
+    10000:   44:            res += i;
+        -:   45:        }
+        -:   46:    }
+        -:   47:
+        2:   48:    return res;
+        -:   49:}
+        -:   50:
+        2:   51:void Calculator::set_name(std::string name) {
+        2:   52:    this->name = name;
+        2:   53:}
+        -:   54:
+    #####:   55:void Child::makeNoise() {
+    #####:   56:    std::cout << "Hello from Child" << std::endl;
+    #####:   57:}
+        -:   58:
+        1:   59:void Child::calculate_result(std::vector<int> &data) {
+        1:   60:    int sum = 0;
+        -:   61:
+    10001:   62:    for (auto& e : data){
+    10000:   63:        if (e % 229 != 0){
+     9943:   64:            sum += e;
+        -:   65:        }
+        -:   66:        else {
+       57:   67:            int k = 5;
+       57:   68:            k++;
+       57:   69:            k++;
+       57:   70:            k++;
+       57:   71:            k++;
+       57:   72:            sum += k;
+        -:   73:        }
+        -:   74:    }
+        -:   75:
+        1:   76:    this->result = sum;
+        1:   77:}
