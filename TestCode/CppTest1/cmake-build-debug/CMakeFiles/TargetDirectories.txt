@@ -1,4 +1,0 @@
-/home/alex/Desktop/Test3/cmake-build-debug/CMakeFiles/Foo.dir
-/home/alex/Desktop/Test3/cmake-build-debug/CMakeFiles/out.dir
-/home/alex/Desktop/Test3/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/alex/Desktop/Test3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
