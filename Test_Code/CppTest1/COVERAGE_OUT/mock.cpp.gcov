@@ -1,0 +1,37 @@
+        -:    0:Source:/home/alex/Desktop/TestCode/CppTest1/mock.cpp
+        -:    0:Graph:/home/alex/Desktop/TestCode/CppTest1/COVERAGE_OUT/OUT-mock.gcno
+        -:    0:Data:/home/alex/Desktop/TestCode/CppTest1/COVERAGE_OUT/OUT-mock.gcda
+        -:    0:Runs:1
+        -:    1:#include <iostream>
+        -:    2:#include <random>
+        -:    3:#include "Foo.h"
+        -:    4:
+      101:    5:std::vector<int> generate_random_data(int n, int low, int high, int seed) {
+      101:    6:    std::mt19937 gen(seed);
+      101:    7:    std::uniform_int_distribution<> distrib(low, high);
+      101:    8:    std::vector<int> data(n);
+  1010101:    9:    for(int i=0; i<n; ++i) data[i] = distrib(gen);
+      202:   10:    return data;
+    =====:   11:}
+        -:   12:
+        1:   13:int main() {
+        1:   14:    Foo* obj = new Foo("Alex");
+        1:   15:    obj->set_status(23);
+      101:   16:    for (int i = 0; i < 100; i++) obj->set_status(i);
+    10001:   17:    for (int i = 0; i < 10000; i++) obj->get_name();
+        -:   18:    
+      101:   19:    for (int i = 0; i < 100; i++){
+        -:   20:        auto data = generate_random_data(10000, -10, 
+      100:   21:                            1000, i+1);
+      100:   22:        obj->calculate_result(data, false);
+      100:   23:        obj->calculate_result(data, true);
+      100:   24:    }
+        -:   25:    
+        -:   26:    auto data = generate_random_data(10000, -10, 
+        1:   27:                            1000, 234);
+    10001:   28:    for (int i = 0; i < 10000; i++) obj->foo(data);
+    10001:   29:    for (int i = 0; i < 10000; i++) obj->incResult();
+        1:   30:    std::cout << "Mock Program Finished. Result: " << 
+        1:   31:        obj->get_result() << std::endl;
+        1:   32:    return 0;
+        1:   33:}

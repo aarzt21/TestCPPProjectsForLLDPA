@@ -1,0 +1,81 @@
+        -:    0:Source:/home/alex/Desktop/TestCode/CppTest1/Foo.cpp
+        -:    0:Graph:/home/alex/Desktop/TestCode/CppTest1/COVERAGE_OUT/OUT-Foo.gcno
+        -:    0:Data:/home/alex/Desktop/TestCode/CppTest1/COVERAGE_OUT/OUT-Foo.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by alex on 07.08.23.
+        -:    3://
+        -:    4:
+        -:    5:#include "Foo.h"
+        -:    6:
+        1:    7:Foo::Foo(std::string name) : name(name), status(1) {}
+        -:    8:
+    #####:    9:int Foo::get_status() {
+    #####:   10:    return status;
+        -:   11:}
+        -:   12:
+        1:   13:float Foo::get_result(){
+        1:   14:    return result; 
+        -:   15:}
+        -:   16:
+      200:   17:float Foo::calculate_result(std::vector<int> &data, bool inc_neg) {
+      200:   18:	float res = 0.0;
+      200:   19:    int count = 0;
+  2000200:   20:    for (auto e: data){
+  2000000:   21:        if (inc_neg){
+  1000000:   22:            res += e;
+        -:   23:        } 
+        -:   24:        else{
+  1000000:   25:            if (e >= 0){
+   990199:   26:                res += e;
+   990199:   27:                count++;
+        -:   28:            }
+        -:   29:        }
+        -:   30:    }
+      200:   31:    if (inc_neg){
+      100:   32:        result = res/data.size();
+        -:   33:    } 
+        -:   34:    else {
+      100:   35:        result = res/count;
+        -:   36:    }
+      200:   37:    return res;
+        -:   38:}
+        -:   39:
+    10000:   40:void Foo::foo(std::vector<int> &data) {
+    10000:   41:    int res = 0;
+        -:   42:
+100010000:   43:    for (auto& e: data){
+100000000:   44:        if (e != 325) {
+ 99890000:   45:          res += e;
+        -:   46:        }
+        -:   47:        else {
+   110000:   48:        	res--;
+   110000:   49:	        int p = 0;
+   110000:   50:	        res--;
+   110000:   51:	        p++;
+   110000:   52:	        res--;
+   110000:   53:	        p++;
+   110000:   54:	        res--;
+   110000:   55:	        p++;
+   110000:   56:	        res--;
+   110000:   57:	        p++;
+   110000:   58:	        res--;
+   110000:   59:	        p++;
+   110000:   60:	        res--;
+   110000:   61:	        p++;
+   110000:   62:	        res--;
+        -:   63:        }
+        -:   64:    }
+    10000:   65:}
+        -:   66:
+    10000:   67:std::string Foo::get_name() {
+    10000:   68:    return name;
+        -:   69:}
+        -:   70:
+    10000:   71:void Foo::incResult() {
+    10000:   72:    result++;
+    10000:   73:}
+        -:   74:
+      101:   75:void Foo::set_status(int newStatus) {
+      101:   76:    status = newStatus;
+      101:   77:}
